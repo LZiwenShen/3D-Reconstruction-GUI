@@ -1,0 +1,11 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file>Standard_vTexture.vert</file>
+        <file>Standard_vTexture.frag</file>
+        <file>camera.icns</file>
+        <file>camera.png</file>
+        <file>camera.svg</file>
+        <file>3dp-scanner-2021.wrl</file>
+    </qresource>
+</RCC>

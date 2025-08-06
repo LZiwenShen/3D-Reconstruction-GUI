@@ -1,0 +1,1235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>PanelScan</class>
+
+  <widget class="QWidget" name="PanelScan">
+    <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+	<horstretch>0</horstretch>
+	<verstretch>0</verstretch>
+      </sizepolicy>
+    </property>
+    <property name="minimumSize">
+      <size>
+	<width>400</width>
+	<height>100</height>
+      </size>
+    </property>
+    <property name="maximumSize">
+      <size>
+	<width>400</width>
+	<height>4000</height>
+      </size>
+    </property>
+
+    <layout class="QVBoxLayout" name="verticalLayoutPanelScan">
+      <property name="spacing">
+	<number>1</number>
+      </property>
+      <property name="margin">
+	<number>1</number>
+      </property>
+	  
+      <item>
+	<widget class="QLineEdit" name="statusBarLine">
+	  <property name="alignment">
+	    <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+	  </property>
+	  <property name="readOnly">
+	    <bool>true</bool>
+	  </property>
+	</widget>
+      </item>
+
+      <item>
+	<widget class="QProgressBar" name="scanningProgress">
+	  <property name="value">
+	    <number>0</number>
+	  </property>
+	</widget>
+      </item>
+
+      <!-- Bounding Box { -->
+
+      <item>
+	<widget class="QCheckBox" name="bboxGroupCheck">
+	  <property name="text">
+	    <string>Bounding Box</string>
+	  </property>
+	  <property name="minimumSize">
+	    <size>
+	      <width>100</width>
+	      <height>22</height>
+	    </size>
+	  </property>
+	  <property name="checked">
+	    <bool>true</bool>
+	  </property>
+	</widget>
+      </item>
+
+
+      <item>
+	<widget class="QGroupBox" name="bboxGroup">
+	  <property name="flat">
+	    <bool>true</bool>
+	  </property>
+	  <property name="sizePolicy">
+	    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+	      <horstretch>0</horstretch>
+	      <verstretch>0</verstretch>
+	    </sizepolicy>
+	  </property>
+
+	  <layout class="QGridLayout" name="gridLayoutBboxGroup">
+	    <property name="margin">
+	      <number>5</number>
+	    </property>
+	    <property name="spacing">
+	      <number>2</number>
+	    </property>
+
+	    <item row="0" column="0">
+	      <widget class="QLabel" name="bboxP0Label">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+		<property name="text">
+		  <string>p0</string>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="0" column="1">
+	      <widget class="QLineEdit" name="bboxP0XLine">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="placeholderText">
+		  <string>p0.x</string>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="0" column="2">
+	      <widget class="QLineEdit" name="bboxP0YLine">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="placeholderText">
+		  <string>p0.y</string>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="0" column="3">
+	      <widget class="QLabel" name="bboxP3Label">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+		<property name="text">
+		  <string>p3</string>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="0" column="4">
+	      <widget class="QLineEdit" name="bboxP3XLine">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="placeholderText">
+		  <string>p3.x</string>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+	      </widget>
+	    </item>
+	    
+	    <item row="0" column="5">
+	      <widget class="QLineEdit" name="bboxP3YLine">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="placeholderText">
+		  <string>p3.y</string>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="0" column="6">
+	      <widget class="QPushButton" name="bboxFileLoadButton">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="text">
+		  <string>Load</string>
+		</property>
+	      </widget>
+            </item>
+
+	    <item row="1" column="0">
+	      <widget class="QLabel" name="bboxP1Label">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+		<property name="text">
+		  <string>p1</string>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="1" column="1">
+	      <widget class="QLineEdit" name="bboxP1XLine">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="placeholderText">
+		  <string>p1.x</string>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="1" column="2">
+	      <widget class="QLineEdit" name="bboxP1YLine">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="placeholderText">
+		  <string>p1.y</string>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+	      </widget>
+	    </item>
+	    
+	    <item row="1" column="3">
+	      <widget class="QLabel" name="bboxP2Label">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+		<property name="text">
+		  <string>p2</string>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="1" column="4">
+	      <widget class="QLineEdit" name="bboxP2XLine">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="placeholderText">
+		  <string>p2.x</string>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="1" column="5">
+	      <widget class="QLineEdit" name="bboxP2YLine">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="placeholderText">
+		  <string>p2.y</string>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="1" column="6">
+	      <widget class="QPushButton" name="bboxFileSaveButton">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+		    <horstretch>1</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="text">
+		  <string>Save</string>
+		</property>
+	      </widget>
+            </item>
+
+	  </layout>
+	</widget>
+      </item>
+
+
+      <!-- Images Group { -->
+
+      <item>
+	<widget class="QCheckBox" name="imagesGroupCheck">
+	  <property name="text">
+	    <string>Images</string>
+	  </property>
+	  <property name="minimumSize">
+	    <size>
+	      <width>100</width>
+	      <height>22</height>
+	    </size>
+	  </property>
+	  <property name="checked">
+	    <bool>false</bool>
+	  </property>
+	</widget>
+      </item>
+
+      <item>
+	<widget class="QGroupBox" name="imagesGroup">
+	  <property name="flat">
+	    <bool>true</bool>
+	  </property>
+	  <property name="sizePolicy">
+	    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+	      <horstretch>0</horstretch>
+	      <verstretch>0</verstretch>
+	    </sizepolicy>
+	  </property>
+
+	  <layout class="QGridLayout" name="gridLayoutImagesGroup">
+	    <property name="margin">
+	      <number>5</number>
+	    </property>
+	    <property name="spacing">
+	      <number>5</number>
+	    </property>
+
+	    <item row="0" column="0">
+	      <widget class="QPushButton" name="imagesUpdateButton">
+		<property name="text">
+		  <string>Update</string>
+		</property>
+		<property name="enabled">
+		  <bool>true</bool>
+		</property>
+		<property name="checkable">
+		  <bool>false</bool>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="0" column="2">
+	      <widget class="QPushButton" name="imagesPreviousButton">
+		<property name="text">
+		  <string>Previous</string>
+		</property>
+		<property name="enabled">
+		  <bool>true</bool>
+		</property>
+		<property name="checkable">
+		  <bool>false</bool>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="0" column="3">
+	      <widget class="QPushButton" name="imagesNextButton">
+		<property name="text">
+		  <string>Next</string>
+		</property>
+		<property name="enabled">
+		  <bool>true</bool>
+		</property>
+		<property name="checkable">
+		  <bool>false</bool>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="0" column="7">
+	      <widget class="QLabel" name="imageRotLabel">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+		    <horstretch>0</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+		<property name="maximumSize">
+		  <size>
+		    <width>75</width>
+		    <height>22</height>
+		  </size>
+		</property>
+		<property name="alignment">
+		  <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		</property>
+		<property name="text">
+		  <string>Rot</string>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="0" column="8">
+	      <widget class="QComboBox" name="imageRotCombo">
+		<property name="sizePolicy">
+		  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+		    <horstretch>0</horstretch>
+		    <verstretch>0</verstretch>
+		  </sizepolicy>
+		</property>
+	      </widget>
+	    </item>
+
+	    <item row="2" column="0" colspan="9">
+	      <widget class="QListView" name="imageList">
+	      </widget>
+	    </item>
+	    
+	  </layout> <!-- layout class="QGridLayout" name="gridLayoutImagesGroup" -->
+	</widget>
+      </item>
+
+      <!-- } Images Group -->
+
+      <!-- Calibrate Group { -->
+      <!--
+
+      <item>
+	<widget class="QCheckBox" name="calibrationGroupCheck">
+	  <property name="text">
+	    <string>Calibration</string>
+	  </property>
+	  <property name="minimumSize">
+	    <size>
+	      <width>100</width>
+	      <height>22</height>
+	    </size>
+	  </property>
+	  <property name="checked">
+	    <bool>false</bool>
+	  </property>
+	</widget>
+      </item>
+
+      <item>
+	<widget class="QGroupBox" name="calibrationGroup">
+	  <property name="flat">
+	    <bool>true</bool>
+	  </property>
+
+	  <layout class="QVBoxLayout" name="verticalLayoutCalibrateGroup">
+	    <property name="margin">
+	      <number>1</number>
+	    </property>
+	    <property name="spacing">
+	      <number>1</number>
+	    </property>
+
+	    <item>
+	      <layout class="QHBoxLayout" name="horizontalLayoutCalibrate_1">
+		<property name="spacing">
+		  <number>5</number>
+		</property>
+		<property name="margin">
+		  <number>5</number>
+		</property>
+
+		<item>
+		  <widget class="QCheckBox" name="calibrateCameraCheck">
+		    <property name="text">
+		      <string>Camera</string>
+		    </property>
+		    <property name="checked">
+		      <bool>true</bool>
+		    </property>
+		    <property name="minimumSize">
+		      <size>
+			<width>90</width>
+			<height>0</height>
+		      </size>
+		    </property>
+		    <property name="maximumSize">
+		      <size>
+			<width>100</width>
+			<height>22</height>
+		      </size>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QCheckBox" name="calibrateTurntableCheck">
+		    <property name="text">
+		      <string>Turntable</string>
+		    </property>
+		    <property name="checked">
+		      <bool>false</bool>
+		    </property>
+		    <property name="minimumSize">
+		      <size>
+			<width>90</width>
+			<height>0</height>
+		      </size>
+		    </property>
+		    <property name="maximumSize">
+		      <size>
+			<width>100</width>
+			<height>22</height>
+		      </size>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QCheckBox" name="calibrateLaser1Check">
+		    <property name="text">
+		      <string>Laser 1</string>
+		    </property>
+		    <property name="checked">
+		      <bool>false</bool>
+		    </property>
+		    <property name="minimumSize">
+		      <size>
+			<width>90</width>
+			<height>0</height>
+		      </size>
+		    </property>
+		    <property name="maximumSize">
+		      <size>
+			<width>100</width>
+			<height>22</height>
+		      </size>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QCheckBox" name="calibrateLaser2Check">
+		    <property name="text">
+		      <string>Laser 2</string>
+		    </property>
+		    <property name="checked">
+		      <bool>false</bool>
+		    </property>
+		    <property name="minimumSize">
+		      <size>
+			<width>90</width>
+			<height>0</height>
+		      </size>
+		    </property>
+		    <property name="maximumSize">
+		      <size>
+			<width>100</width>
+			<height>22</height>
+		      </size>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QLabel" name="calibrateFillSpace_0">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="text">
+		      <string></string>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+	      </layout>
+	    </item>
+
+	    <item>
+	      <layout class="QHBoxLayout" name="horizontalLayoutCalibrate_2">
+		<property name="spacing">
+		  <number>5</number>
+		</property>
+		<property name="margin">
+		  <number>5</number>
+		</property>
+
+		<item>
+		  <widget class="QLabel" name="chessboardColsLabel">
+		    <property name="text">
+		      <string>Cols</string>
+		    </property>
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="maximumSize">
+		      <size>
+			<width>50</width>
+			<height>22</height>
+		      </size>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QSpinBox" name="chessboardColsSpin">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="minimumSize">
+		      <size>
+			<width>50</width>
+			<height>0</height>
+		      </size>
+		    </property>
+		    <property name="maximumSize">
+		      <size>
+			<width>75</width>
+			<height>22</height>
+		      </size>
+		    </property>
+		    <property name="value">
+		      <number>4</number>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QLabel" name="chessboardRowsLabel">
+		    <property name="text">
+		      <string>Rows</string>
+		    </property>
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="maximumSize">
+		      <size>
+			<width>50</width>
+			<height>22</height>
+		      </size>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QSpinBox" name="chessboardRowsSpin">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="minimumSize">
+		      <size>
+			<width>50</width>
+			<height>0</height>
+		      </size>
+		    </property>
+		    <property name="maximumSize">
+		      <size>
+			<width>75</width>
+			<height>22</height>
+		      </size>
+		    </property>
+		    <property name="value">
+		      <number>5</number>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QLabel" name="chessboardCellWidthLabel">
+		    <property name="text">
+		      <string>Cell Width</string>
+		    </property>
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="minimumSize">
+		      <size>
+			<width>75</width>
+			<height>0</height>
+		      </size>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QLineEdit" name="chessboardCellWidthValue">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="maximumSize">
+		      <size>
+			<width>75</width>
+			<height>22</height>
+		      </size>
+		    </property>
+		    <property name="enabled">
+		      <bool>true</bool>
+		    </property>
+		    <property name="frame">
+		      <bool>false</bool>
+		    </property>
+		    <property name="placeholderText">
+		      <string>Width</string>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QLabel" name="chessboardCellHeightLabel">
+		    <property name="text">
+		      <string>Cell Height</string>
+		    </property>
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="minimumSize">
+		      <size>
+			<width>75</width>
+			<height>0</height>
+		      </size>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QLineEdit" name="chessboardCellHeightValue">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="maximumSize">
+		      <size>
+			<width>75</width>
+			<height>22</height>
+		      </size>
+		    </property>
+		    <property name="enabled">
+		      <bool>true</bool>
+		    </property>
+		    <property name="frame">
+		      <bool>false</bool>
+		    </property>
+		    <property name="placeholderText">
+		      <string>Height</string>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QLabel" name="chessboardFillSpace_1">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="text">
+		      <string></string>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QPushButton" name="chessboardListAddButton">
+		    <property name="text">
+		      <string>+</string>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QPushButton" name="chessboardListDeleteButton">
+		    <property name="text">
+		      <string>-</string>
+		    </property>
+		  </widget>
+		</item>
+		
+		<item>
+		  <widget class="QComboBox" name="chessboardsCombo">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		  </widget>
+		</item>
+
+	      </layout>
+	    </item>
+
+	    <item>
+	      <layout class="QHBoxLayout" name="horizontalLayoutCalibration_3">
+		<property name="spacing">
+		  <number>5</number>
+		</property>
+		<property name="margin">
+		  <number>5</number>
+		</property>
+
+		<item>
+		  <widget class="QPushButton" name="loadScannerCalibrationButton">
+		    <property name="text">
+		      <string>Load</string>
+		    </property>
+		    <property name="enabled">
+		      <bool>false</bool>
+		    </property>
+		    <property name="checkable">
+		      <bool>true</bool>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QPushButton" name="chessboardDetectAllButton">
+		    <property name="text">
+		      <string>Detect</string>
+		    </property>
+		    <property name="enabled">
+		      <bool>true</bool>
+		    </property>
+		    <property name="checkable">
+		      <bool>true</bool>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QPushButton" name="calibrateButton">
+		    <property name="text">
+		      <string>Calibrate</string>
+		    </property>
+		    <property name="enabled">
+		      <bool>true</bool>
+		    </property>
+		    <property name="checkable">
+		      <bool>true</bool>
+		    </property>
+		  </widget>
+		</item>
+
+		<item>
+		  <widget class="QPushButton" name="saveScannerCalibrationButton">
+		    <property name="text">
+		      <string>Save</string>
+		    </property>
+		    <property name="enabled">
+		      <bool>false</bool>
+		    </property>
+		    <property name="checkable">
+		      <bool>true</bool>
+		    </property>
+		  </widget>
+		</item>
+
+	      </layout>
+	    </item>
+
+	  </layout>
+	</widget>
+      </item>
+
+      -->
+
+      <!-- } Calibrate Group -->
+
+      <!-- Triangulation Group { -->
+
+      <item>
+	<widget class="QCheckBox" name="triangulationGroupCheck">
+	  <property name="text">
+	    <string>Triangulation</string>
+	  </property>
+	  <property name="minimumSize">
+	    <size>
+	      <width>100</width>
+	      <height>22</height>
+	    </size>
+	  </property>
+	  <property name="checked">
+	    <bool>false</bool>
+	  </property>
+	</widget>
+      </item>
+
+      <item>
+	<widget class="QGroupBox" name="triangulationGroup">
+	  <property name="flat">
+	    <bool>true</bool>
+	  </property>
+
+	  <layout class="QVBoxLayout" name="verticalLayoutTriangulationGroup">
+	    <property name="margin">
+	      <number>1</number>
+	    </property>
+	    <property name="spacing">
+	      <number>1</number>
+	    </property>
+
+	    
+	    <item>
+	      <layout class="QGridLayout" name="gridLayoutTriangulation">
+		<property name="spacing">
+		  <number>5</number>
+		</property>
+		<property name="margin">
+		  <number>5</number>
+		</property>
+
+		<item row="0" column="0">
+		  <widget class="QLabel" name="triangulateChoiceLabel">
+		    <property name="text">
+		      <string>Triangulate </string>
+		    </property>
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+			<horstretch>1</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item row="0" column="1">
+		  <widget class="QComboBox" name="triangulateChoiceCombo">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		  </widget>
+		</item>
+
+		<item row="0" column="2" colspan="2">
+		  <widget class="QCheckBox" name="triangulateWithColorCheck">
+		    <property name="text">
+		      <string>With Color</string>
+		    </property>
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+			<horstretch>1</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		  </widget>
+		</item>
+
+		<item row="1" column="0">
+		  <widget class="QLabel" name="anglePerFrameLabel">
+		    <property name="text">
+		      <string>Angle Per Frame </string>
+		    </property>
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+			<horstretch>1</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item row="1" column="1">
+		  <widget class="QLineEdit" name="anglePerFrameLine">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+			<horstretch>1</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="readOnly">
+		      <bool>true</bool>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item row="1" column="2">
+		  <widget class="QLabel" name="frameNumberLabel">
+		    <property name="text">
+		      <string>Frame # </string>
+		    </property>
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+			<horstretch>1</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item row="1" column="3">
+		  <widget class="QLineEdit" name="frameNumberLine">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+			<horstretch>1</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="readOnly">
+		      <bool>true</bool>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignRight|Qt::AlignVCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+		<item row="2" column="0" colspan="2">
+		  <widget class="QPushButton" name="triangulationRunButton">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+			<horstretch>0</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="text">
+		      <string>RUN</string>
+		    </property>
+		    <property name="enabled">
+		      <bool>true</bool>
+		    </property>
+		    <property name="checkable">
+		      <bool>true</bool>
+		    </property>
+		  </widget>
+		</item>
+
+	      </layout> <!-- name="horizontalLayoutTriangulation_0" -->
+	    </item>
+
+	  </layout> <!-- name="verticalLayoutTriangulationGroup" -->
+	</widget> <!-- name="triangulationGroup" -->
+      </item>
+
+      <!-- } Triangulation Group -->
+
+      <!-- View3D Group { -->
+
+      <item>
+	<widget class="QCheckBox" name="view3DGroupCheck">
+	  <property name="text">
+	    <string>3D View</string>
+	  </property>
+	  <property name="minimumSize">
+	    <size>
+	      <width>100</width>
+	      <height>22</height>
+	    </size>
+	  </property>
+	  <property name="checked">
+	    <bool>false</bool>
+	  </property>
+	</widget>
+      </item>
+
+      <item>
+	<widget class="QGroupBox" name="view3DGroup">
+	  <property name="flat">
+	    <bool>true</bool>
+	  </property>
+
+	  <layout class="QVBoxLayout" name="verticalLayoutView3DGroup">
+	    <property name="margin">
+	      <number>1</number>
+	    </property>
+	    <property name="spacing">
+	      <number>1</number>
+	    </property>
+
+	    <item>
+	      <layout class="QGridLayout" name="gridLayoutView3DGroup">
+		<property name="spacing">
+		  <number>5</number>
+		</property>
+		<property name="margin">
+		  <number>5</number>
+		</property>
+		
+		<item row="0" column="0">
+		  <widget class="QPushButton" name="wrlFileSaveButton">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+			<horstretch>1</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="text">
+		      <string>Save Point Cloud</string>
+		    </property>
+		  </widget>
+		</item>
+
+		<item row="0" column="1">
+		  <widget class="QLabel" name="view3DFillSpace_0">
+		    <property name="sizePolicy">
+		      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+			<horstretch>1</horstretch>
+			<verstretch>0</verstretch>
+		      </sizepolicy>
+		    </property>
+		    <property name="text">
+		      <string></string>
+		    </property>
+		    <property name="alignment">
+		      <set>Qt::AlignCenter</set>
+		    </property>
+		  </widget>
+		</item>
+
+	      </layout> <!-- layout name="horizontalLayoutView3DGroup" -->
+	    </item>
+	  </layout> <!-- layout name="verticalLayoutView3DGroup" -->
+	</widget> <!-- widget name="view3DGroup" -->
+      </item>
+
+      <!-- } View3D Group -->
+
+      <item>
+	<spacer name="verticalSpacerPanelScan">
+	  <property name="orientation">
+	    <enum>Qt::Vertical</enum>
+	  </property>
+	</spacer>
+      </item>
+
+    </layout> <!-- layout name="verticalLayoutPanelScan" -->
+  </widget> <!-- widget name="PanelScan" -->
+
+  <customwidgets>
+    <customwidget>
+      <class>ImgGLWidget</class>
+      <extends>QWidget</extends>
+      <header>ImgGLWidget.hpp</header>
+      <container>1</container>
+    </customwidget>
+  </customwidgets>
+
+  <resources/>
+  <connections/>
+</ui>

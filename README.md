@@ -20,7 +20,7 @@ The scanner captures images with different laser configurations (blank, laser1, 
 
 ---
 
-## 📷 Key Features
+## Key Features
 
 ### Scanner Control
 - Connects over LAN or WiFi (supports `.local` hostname resolution)
